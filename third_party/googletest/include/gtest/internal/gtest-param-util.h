@@ -92,7 +92,9 @@ template <typename> class ParamGenerator;
 template <typename T>
 class ParamIteratorInterface {
  public:
+#pragma warning(disable: 5267)
   virtual ~ParamIteratorInterface() {}
+#pragma warning(default: 5267)
   // A pointer to the base generator instance.
   // Used only for the purposes of iterator comparison
   // to make sure that two iterators belong to the same generator.
@@ -843,7 +845,9 @@ class CartesianProductGenerator
           current_(is_end ? end_ : begin_) {
       ComputeCurrentValue();
     }
+#pragma warning(disable: 4616 5267)
     ~IteratorImpl() override {}
+#pragma warning(default: 4616 5267)
 
     const ParamGeneratorInterface<ParamType>* BaseGenerator() const override {
       return base_;

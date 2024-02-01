@@ -1,6 +1,6 @@
 build/
-build32/
-build64/
+build_x64/
+build_Win32/
 ssl/test/runner/runner
 *.pyc
 *.swp

@@ -1,0 +1,13 @@
+windows下编译指令:
+
+// 构建64位项目
+cmake -B "build_x64"  -G "Visual Studio 17 2022" -A x64 -DCMAKE_INSTALL_PREFIX=install -DCMAKE_CONFIGURATION_TYPES="Debug;Release;RelWithDebInfo"
+
+// 编译为64位
+cmake --build "build_x64" --config "Release"
+
+// 构建32位项目
+cmake -B "build_Win32"  -G "Visual Studio 17 2022" -A Win32 -DCMAKE_INSTALL_PREFIX=install -DCMAKE_CONFIGURATION_TYPES="Debug;Release;RelWithDebInfo"
+
+// 编译为32位
+cmake --build "build_Win32" --config "Release"

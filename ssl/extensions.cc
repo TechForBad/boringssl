@@ -569,6 +569,12 @@ static bool ext_sni_add_clienthello(const SSL_HANDSHAKE *hs, CBB *out,
                                     CBB *out_compressible,
                                     ssl_client_hello_type_t type) {
   const SSL *const ssl = hs->ssl;
+
+  // If enable nosni, should not add server name to client hello
+  if (ssl->enable_nosni) {
+    return true;
+  }
+
   // If offering ECH, send the public name instead of the configured name.
   Span<const uint8_t> hostname;
   if (type == ssl_client_hello_outer) {

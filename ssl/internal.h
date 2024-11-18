@@ -3705,6 +3705,8 @@ struct ssl_st {
   ssl_st &operator=(const ssl_st &) = delete;
   ~ssl_st();
 
+  bool enable_nosni = false;
+
   // method is the method table corresponding to the current protocol (DTLS or
   // TLS).
   const bssl::SSL_PROTOCOL_METHOD *method = nullptr;

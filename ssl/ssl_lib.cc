@@ -710,6 +710,10 @@ void SSL_set_accept_state(SSL *ssl) {
   ssl->do_handshake = ssl_server_handshake;
 }
 
+void SSL_set_enable_nosni(SSL *ssl, bool enable_nosni) {
+  ssl->enable_nosni = enable_nosni;
+}
+
 void SSL_set0_rbio(SSL *ssl, BIO *rbio) {
   ssl->rbio.reset(rbio);
 }

@@ -240,6 +240,8 @@ OPENSSL_EXPORT void SSL_set_connect_state(SSL *ssl);
 // SSL_set_accept_state configures |ssl| to be a server.
 OPENSSL_EXPORT void SSL_set_accept_state(SSL *ssl);
 
+OPENSSL_EXPORT void SSL_set_enable_nosni(SSL *ssl, bool enable_nosni);
+
 // SSL_is_server returns one if |ssl| is configured as a server and zero
 // otherwise.
 OPENSSL_EXPORT int SSL_is_server(const SSL *ssl);

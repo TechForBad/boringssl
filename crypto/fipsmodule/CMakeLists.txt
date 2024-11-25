@@ -276,9 +276,3 @@ else()
 
   add_dependencies(fipsmodule global_target)
 endif()
-
-target_compile_options(
-    fipsmodule
-    PRIVATE
-    /WX-
-    )

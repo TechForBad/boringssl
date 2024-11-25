@@ -260,6 +260,7 @@ if(WIN32)
   # A bug in CMake < 3.13.0 may cause the space in this value to
   # cause issues when building with NASM. In that case, update CMake.
   add_definitions("-D_STL_EXTRA_DISABLED_WARNINGS=4774 4987")
+  add_definitions("/WX-")
 endif()
 
 # pthread_rwlock_t on Linux requires a feature flag. We limit this to Linux

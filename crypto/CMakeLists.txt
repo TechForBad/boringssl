@@ -434,6 +434,13 @@ add_library(
   ${CRYPTO_ARCH_SOURCES}
   ${CRYPTO_FIPS_OBJECTS}
 )
+
+target_compile_options(
+  crypto
+  PRIVATE
+  /WX-
+  )
+
 target_include_directories(crypto INTERFACE
  $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
  $<INSTALL_INTERFACE:include>

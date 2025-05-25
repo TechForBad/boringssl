@@ -162,6 +162,8 @@
 // https://boringssl-review.googlesource.com/c/boringssl/+/21664.
 #include <openssl/hmac.h>
 
+#include <stdbool.h>
+
 // Forward-declare struct timeval. On Windows, it is defined in winsock2.h and
 // Windows headers define too many macros to be included in public headers.
 // However, only a forward declaration is needed.
